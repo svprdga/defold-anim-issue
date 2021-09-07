@@ -1,0 +1,31 @@
+-- Constants
+
+local top_limit = 800
+local bot_limit = 150
+local speed = 10
+
+-- Lifecycle
+
+function init(self)	
+	self.move_to = 0
+end
+
+function update(self, dt)
+	local position = go.get_position()
+
+	if position.y > top_limit then
+		self.move_to = 1
+	elseif position.y < bot_limit then
+		self.move_to = 0
+	end
+
+	local increment
+	if self.move_to == 0 then
+		increment = (position.y + speed)
+	else
+		increment = (position.y - speed)
+	end
+
+	go.set_position(vmath.vector3(position.x, increment, position.z))
+
+end
