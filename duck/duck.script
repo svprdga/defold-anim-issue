@@ -1,0 +1,17 @@
+-- Hashed values
+
+local camera_id = hash("/camera")
+
+-- Lifecycle
+
+function init(self)
+	local position = go.get_position()
+	self.x = position.x
+	self.z = position.z
+end
+
+function update(self, dt)
+	local camera_pos = go.get_position(camera_id)
+	local y_position = camera_pos.y
+	go.set_position(vmath.vector3(self.x, y_position, self.z))
+end
