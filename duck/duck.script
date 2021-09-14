@@ -14,4 +14,4 @@ function update(self, dt)
 	local camera_pos = go.get_position(camera_id)
 	local y_position = camera_pos.y
 	go.set_position(vmath.vector3(self.x, y_position, self.z))
-end
+endxº
