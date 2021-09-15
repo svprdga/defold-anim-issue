@@ -1,0 +1,22 @@
+{
+  "files.associations": {
+    "*.script": "lua",
+    "*.gui_script": "lua",
+    "*.render_script": "lua",
+    "*.editor_script": "lua"
+  },
+  "editor.snippetSuggestions": "bottom",
+  "Lua.diagnostics.globals": [
+    "go",
+    "sprite",
+    "msg",
+    "vmath",
+    "hash",
+    "sys",
+    "update",
+    "init",
+    "on_message",
+    "on_input",
+    "sound"
+  ]
+}
